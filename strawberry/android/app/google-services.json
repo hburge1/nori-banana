@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "376805364402",
+    "project_id": "nori-banana",
+    "storage_bucket": "nori-banana.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:376805364402:android:b5f3cfc019ea5ebdbfefab",
+        "android_client_info": {
+          "package_name": "com.createnew.strawberry"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "376805364402-ij9j6df0lr60n1oc50ddmvdrb6p9sdft.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApJZYP4vpGuiQBbWyAu26FH6SMW6W1iyE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "376805364402-ij9j6df0lr60n1oc50ddmvdrb6p9sdft.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
