@@ -4,6 +4,7 @@ import 'package:strawberry/pages/authentication.dart';
 import 'widgets/loading.dart';
 
 
+
 Future<void> main() async {
   
   WidgetsFlutterBinding.ensureInitialized();
@@ -12,7 +13,7 @@ Future<void> main() async {
 }
 
 class NoriApp extends StatelessWidget {
-const  NoriApp({Key? key}) : super(key: key);
+  const  NoriApp({Key? key}) : super(key: key);
  @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,8 +21,7 @@ const  NoriApp({Key? key}) : super(key: key);
       theme: ThemeData(
         primarySwatch: Colors.purple,
       ),
-      home: Authenication()
-    );
+      home: Authenication());
   }
 }            
 
