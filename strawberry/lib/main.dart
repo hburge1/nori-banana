@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:strawberry/pages/authentication.dart';
 import 'widgets/loading.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 
 
@@ -20,9 +21,16 @@ class NoriApp extends StatelessWidget {
       title: 'Nori Banana App',
       theme: ThemeData(
         primarySwatch: Colors.purple,
-      ),
-      home: Authenication());
-  }
-}            
+     
+       ),
+      home: const Authenication());
+        body: Center(
+          child: Image(
+          image: NetworkImage('https://stock.adobe.com/ca/images/vector-seamless-pattern-with-strawberry-on-stripe-pink-backdrop-food-background-can-be-used-for-restaurant-or-cafe-menu-design-banners-wrapping-paper-eps10-cute-berry-design-wallpaper-print-fo/260575806'),
 
+          ),
+          );
+          
+      }            
 
+}

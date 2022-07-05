@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:strawberry/forms/registerform.dart';
 import '../forms/loginform.dart';
 
 
@@ -10,7 +11,7 @@ class Authenication extends StatelessWidget {
         appBar: AppBar(
           title: const Text("Nori Banana"),
         ),
-        body: const LoginForm());
+        body: const RegisterForm());
             
   }
 }

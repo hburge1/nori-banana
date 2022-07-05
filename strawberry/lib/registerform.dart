@@ -19,6 +19,8 @@ class _RegisterFormState extends State<RegisterForm>{
   bool loading = false;
   final _formKey = GlobalKey<FormState>();
   final TextEditingController _email = TextEditingController();
+  final TextEditingController _username = TextEditingController();
+  final TextEditingController _bio = TextEditingController();
   final TextEditingController _password = TextEditingController();
   
   
@@ -39,6 +41,29 @@ class _RegisterFormState extends State<RegisterForm>{
                         }
                         if (!value.contains('@')) {
                           return "Email is in wrong format";
+                        }
+                        return null;
+                      },
+                    ),
+                      TextFormField(
+                      controller: _username,
+                      decoration: inputStyling("Username"),
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return "Username cannot be empty";
+                        }
+                        return null;
+                      },
+                    ),
+                     TextFormField(
+                      controller: _bio,
+                      decoration: inputStyling("Bio"),
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return "Bio cannot be empty";
+                        }
+                        if (value.length < 7) {
+                          return "Bio is too short";
                         }
                         return null;
                       },
@@ -79,8 +104,8 @@ Future<void> register() async {
              email: _email.text, password: _password.text);
 
         await _db.collection("users").doc(registerResponse.user!.uid).set({
-          "name": _email.text,
-          
+          "name": _username.text,
+          "bio": _bio.text,
         });
 
          
